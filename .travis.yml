@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+script:
+- npm test
+deploy:
+  provider: heroku
+  app: vue-performance-test
+  api_key:
+    secure: nUfjTIHIKRPt8Aik6BdGT1fY/nOb9XnRX439mUj5gvfVfcT7mSrOQZlRTYO/RrOjf3vRC8jVFajMqU8FqNyGmqYFQsZghbU8k9rtj5i/IIsVjJHF4/wqE9ti1L0kj2o26RwD8pa2jGyl/VHyZo4xMwWkKSP6wI66fskiNjLJgrJI+Yzu+1WJvB8I6O8YvQyNKQmS3OaLea4q8D4Q7mndNMhHwd5hSfnpSxvTES6zo/w9o3xWDZKqjzUsvU8ytu6Y3KEYJ/NabIjNN5YHTBlI08v0oGQmL6B3Fji6ObYiYMFHfwDnLc1pOdv6Ta9w0QiB95xV9x0zUaMBdxdpdS5Vm3iLrol+nHI6cDmiSabld2W234n+rcRUmUfRkrxpzrGkeNnvt8w65cgOnA/vH/il0/nF0EQAMiLlDuCQTAoV5TeP2Ch1EoYzkqN4dz4wtw804Eb6nYL+vBv/HdFpZEjF/Nsx2s+rPMROS91JFH8nb66QABpAcwjnX20sCPEGGjjw5RXNWiILpqtzY/ywpnGbomQmbnHmpTTDNrR9HhNOWTkpog5VyQLZ7M3JT1U7H6bzm3oVw18i7mSh9j6AvvelwwHotmRXHWG+wWP8MhmKDy/3LEu0A62zdMP+BJhwRbpsp4CtGlDEmfMUy02/Jb0Lyte5yFNuYbecYIvBYviPyG4=
+  on:
+    repo: degreeproject/vue-performance-test
+    branch: master
