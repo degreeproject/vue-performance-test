@@ -41,7 +41,7 @@ export default {
     },
     randomArray(size) {
       let i = 0
-      this.array = Array .from({length: size}, () => i++);
+      this.array = Array.from({length: size}, () => i++);
     }
   },
   computed:{

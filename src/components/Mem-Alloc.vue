@@ -2,7 +2,7 @@
 <div id="wrapper">
 <p>Press the buttons to initiate the memory allocation test tests</p>
 <b-form-input id="arraySizeInput" v-model="arraySize" placeholder="Enter array size"></b-form-input>
-<b-button variant="primary" @click="randomArray(arraySize, 1, 100)">Generate array</b-button>
+<b-button variant="primary" @click="randomArray(arraySize)">Generate array</b-button>
 <b-button variant="success" @click="startTest">Run test</b-button>
 <b-button variant="danger" @click="clearArrays">Reset all</b-button>
   <ul id="oldArray">
@@ -11,9 +11,7 @@
     </li>
   </ul>
   <ul id="newArray">
-    <li v-for="index in newArray" :key="index">
-      {{index}}
-    </li>
+    <p>Allocation done: {{this.done}}</p>
   </ul>
 </div>
 </template>
@@ -27,16 +25,19 @@ export default {
     return {
       oldArray: [],
       newArray: [],
-      arraySize: 1
+      arraySize: 1,
+      done: false,
     }
   },
   methods: {
     startTest(){
       this.newArray = this.oldArray;
+      this.done = true;
     },
     clearArrays(){
       this.oldArray = [],
-      this.newArray = []
+      this.newArray = [],
+      this.done = false
     },
     randomArray(size) {
     let i = 0
