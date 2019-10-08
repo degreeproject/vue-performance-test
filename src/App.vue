@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <memAlloc></memAlloc>
+    <!-- <memAlloc></memAlloc> -->
+  <domtest/>
   </div>
 </template>
 
 <script>
-// import domtest from './components/DOM-test.vue'
-import memAlloc from './components/Mem-Alloc'
+import domtest from './components/DOM-test.vue'
+// import memAlloc from './components/Mem-Alloc'
 
 export default {
   name: 'app',
@@ -14,8 +15,8 @@ export default {
       return {}
   },
   components: {
-    // domtest,
-    memAlloc
+    domtest,
+    // memAlloc
   }
 }
 </script>
